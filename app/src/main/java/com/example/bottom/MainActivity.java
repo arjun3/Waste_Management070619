@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView notification, stack, chat;
     LinearLayout layout;
     NestedScrollView scrollView;
-    CoordinatorLayout coordinator;
+//    CoordinatorLayout coordinator;
     ConstraintLayout constraintLayout;
 
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         chat = findViewById(R.id.bottom_chat);
         layout = findViewById(R.id.li_popup);
         scrollView = findViewById(R.id.nested_scroll);
-        coordinator = findViewById(R.id.coordinator);
+//        coordinator = findViewById(R.id.coordinator);
         constraintLayout = findViewById(R.id.constraint);
 
 
