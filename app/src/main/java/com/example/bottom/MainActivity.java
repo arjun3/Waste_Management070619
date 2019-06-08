@@ -5,8 +5,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.widget.NestedScrollView;
 
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +25,13 @@ import com.smarteist.autoimageslider.SliderView;
 public class MainActivity extends AppCompatActivity {
 
     SliderView sliderView;
-    ImageView notification, stack, chat;
+    ImageView  stack, chat;
     LinearLayout layout;
     NestedScrollView scrollView;
 //    CoordinatorLayout coordinator;
     ConstraintLayout constraintLayout;
+    ImageView Register;
+    LinearLayout notification;
 
 
 
@@ -37,14 +41,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         sliderView = findViewById(R.id.sliderView);
 
-        notification = findViewById(R.id.bottom_notification);
+        notification = findViewById(R.id.bottom_notification_li);
         stack = findViewById(R.id.bottom_stack);
         chat = findViewById(R.id.bottom_chat);
         layout = findViewById(R.id.li_popup);
         scrollView = findViewById(R.id.nested_scroll);
 //        coordinator = findViewById(R.id.coordinator);
         constraintLayout = findViewById(R.id.constraint);
-
+        Register = findViewById(R.id.register);
 
 
         SliderAdapter adapter = new SliderAdapter(this);
@@ -80,6 +84,21 @@ public class MainActivity extends AppCompatActivity {
                 if(layout.getVisibility() == View.VISIBLE) {
                     layout.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("clicked------------------------");
+            }
+        });
+
+        Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UserRegistration.class);
+                startActivity(intent);
             }
         });
 

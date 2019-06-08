@@ -32,82 +32,24 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/include_toolbar" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/anniversarygift"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include2" />
+            app:layout_constraintTop_toBottomOf="@+id/include2">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            android:src="@drawable/birthday"/>
+            <ImageView
+                android:id="@+id/register"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/registration" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            android:src="@drawable/clock" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            android:src="@drawable/cushion"/>
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            android:src="@drawable/dinnerset"/>
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5"
-            tools:srcCompat="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginLeft="52dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            tools:srcCompat="@tools:sample/avatars" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -115,12 +57,12 @@
     </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="250dp"
         android:id="@+id/li_popup"
         app:layout_anchor="@id/bottomAppBar"
         android:background="@drawable/bg_bottom_sheet_dialog_fragment"
-        android:visibility="gone"
+        android:layout_margin="5dp"
         android:orientation="vertical">
 
     </LinearLayout>
@@ -129,12 +71,12 @@
         android:id="@+id/bottomAppBar"
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_gravity="bottom"
         app:fabAlignmentMode="end"
         app:hideOnScroll="true"
         app:fabCradleMargin="8dp"
-        app:backgroundTint="@color/green"
+        app:backgroundTint="@color/colorPrimary"
         app:fabCradleRoundedCornerRadius="15dp">
 
         <LinearLayout
@@ -143,8 +85,9 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/bottom_notification_li"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ImageView
                         android:id="@+id/bottom_notification"
@@ -158,7 +101,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/bottom_stack"
@@ -172,7 +115,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/bottom_chat"
@@ -195,7 +138,7 @@
         android:layout_height="wrap_content"
         app:fabSize="normal"
         app:layout_anchor="@id/bottomAppBar"
-        app:backgroundTint="@color/green"
+        app:backgroundTint="@color/colorPrimary"
         android:src="@drawable/profile"/>
 
 
