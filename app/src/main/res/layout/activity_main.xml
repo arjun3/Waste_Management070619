@@ -59,11 +59,12 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:id="@+id/li_popup"
+        android:id="@+id/frame_popup"
         app:layout_anchor="@id/bottomAppBar"
         android:background="@drawable/bg_bottom_sheet_dialog_fragment"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:visibility="gone">
 
     </FrameLayout>
 
