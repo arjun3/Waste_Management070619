@@ -14,10 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     SliderView sliderView;
     ImageView  stack, chat;
-    LinearLayout layout;
+    FrameLayout layout;
     NestedScrollView scrollView;
 //    CoordinatorLayout coordinator;
     ConstraintLayout constraintLayout;
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         sliderView = findViewById(R.id.sliderView);
 
         notification = findViewById(R.id.bottom_notification_li);
+       // notification.setOnClickListener(this);
         stack = findViewById(R.id.bottom_stack);
         chat = findViewById(R.id.bottom_chat);
         layout = findViewById(R.id.li_popup);
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 //        coordinator = findViewById(R.id.coordinator);
         constraintLayout = findViewById(R.id.constraint);
         Register = findViewById(R.id.register);
-
+        //Register.setOnClickListener(this);
 
         SliderAdapter adapter = new SliderAdapter(this);
         sliderView.setSliderAdapter(adapter);
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+//
         constraintLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,22 +90,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("clicked------------------------");
-            }
-        });
 
-        Register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
+       Register.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, UserRegistration.class);
                 startActivity(intent);
-            }
-        });
+           }
+       });
 
 
     }
 
+
+
+//    @Override
+//    public void onClick(View v) {
+//        Intent intent;
+//
+//        switch (v.getId()){
+//            case R.id.register:
+//                intent = new Intent(this, UserRegistration.class);
+//                startActivity(intent);
+//                break;
+//
+////            case R.id.bottom_notification_li:
+////                NotificationBottomSheet notificationBottomSheet = new NotificationBottomSheet();
+////                notificationBottomSheet.show(getSupportFragmentManager(), notificationBottomSheet.getTag());
+//
+//
+//
+//        }
+//    }
 }

@@ -56,16 +56,18 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <LinearLayout
-        android:layout_width="350dp"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="250dp"
         android:id="@+id/li_popup"
         app:layout_anchor="@id/bottomAppBar"
         android:background="@drawable/bg_bottom_sheet_dialog_fragment"
-        android:layout_margin="5dp"
-        android:orientation="vertical">
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
-    </LinearLayout>
+    </FrameLayout>
+
+
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -132,6 +134,8 @@
 
 
     </com.google.android.material.bottomappbar.BottomAppBar>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
