@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:onClick="onClick">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_2"
@@ -464,6 +465,8 @@
             android:gravity="center_vertical"
             android:padding="5dp"
             android:hint="മൊബൈൽ"
+            android:inputType="number"
+            android:maxLength="10"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -482,6 +485,7 @@
             android:gravity="center_vertical"
             android:padding="5dp"
             android:hint="ലാൻഡ് ഫോൺ"
+            android:inputType="number"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -500,6 +504,7 @@
             android:gravity="center_vertical"
             android:padding="5dp"
             android:hint="അംഗങ്ങളുടെ എണ്ണം"
+            android:inputType="number"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -508,16 +513,17 @@
         <EditText
             android:id="@+id/textView22"
             android:layout_width="0dp"
-            android:layout_height="33dp"
+            android:layout_height="100dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:background="@drawable/bg_tv"
-            android:gravity="center_vertical"
+            android:gravity="top"
             android:padding="5dp"
             android:hint="വിലാസം"
+            android:inputType="textMultiLine"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -541,7 +547,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-        <TextView
+        <EditText
             android:id="@+id/textView24"
             android:layout_width="0dp"
             android:layout_height="33dp"
@@ -553,7 +559,7 @@
             android:background="@drawable/bg_tv"
             android:gravity="center_vertical"
             android:padding="5dp"
-            android:text="സ്കീം സെലക്ട് ചെയ്യുക"
+            android:hint="കെ എസ് ഇ ബി ഉപഭോക്ത നമ്പർ"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
