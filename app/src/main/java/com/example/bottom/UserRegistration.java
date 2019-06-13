@@ -30,7 +30,7 @@ public class UserRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_registration);
 
-        spinner_category = (Spinner) findViewById(R.id.sv_category);
+        spinner_category = findViewById(R.id.sv_category);
         country = findViewById(R.id.sv_country3);
         state = findViewById(R.id.sv_country4);
         district = findViewById(R.id.sv_country);
@@ -382,6 +382,7 @@ public class UserRegistration extends AppCompatActivity {
     }
 
     public void hideSoftKeyboard() {
+
         if(getCurrentFocus()!=null) {
             InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);

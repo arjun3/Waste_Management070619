@@ -9,4 +9,5 @@
     <color name="grey">#C0C0C0</color>
     <color name="divider_ash">#615F5F</color>
     <color name="Nature_green">#78b955</color>
+    <color name="transparent">#0078B955</color>
 </resources>
